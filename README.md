@@ -15,7 +15,6 @@ OKBot 是一款基于 Chrome 浏览器的 AI 助手扩展，它能无缝融入�
 
 </p>
 
-![image](https://github.com/user-attachments/assets/6648a6ab-eda2-4cdc-b583-b095e66dd114)
 
 
 ✨ 功能亮点
@@ -37,3 +36,7 @@ OKBot 是一款基于 Chrome 浏览器的 AI 助手扩展，它能无缝融入�
 方法一：下载项目ZIP，解压后将其添加为CHROME的插件。
 
 方法二：Chrome 应用商店安装 (即将推出)
+
+![image](https://github.com/user-attachments/assets/6648a6ab-eda2-4cdc-b583-b095e66dd114)
+![image](https://github.com/user-attachments/assets/4bfaf0b0-0514-42bd-8b88-7ded0d72c738)
+
