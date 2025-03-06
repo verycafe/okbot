@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "OKBot",
+  "version": "2.5",
+  "description": "使用AI技术在网页上提供翻译和助手功能",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "<all_urls>" 
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*"],
+      "js": ["content.js"],
+      "css": ["translator.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["general-translate.js"],
+      "css": ["translator.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["kimi-api.js", "slider.js"],
+      "css": ["translator.css", "slider.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["slider.html", "translator.css", "slider.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_page": "options.html", 
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "OKBot"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

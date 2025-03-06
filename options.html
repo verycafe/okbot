@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OKBot 设置</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    h2 {
+      font-size: 18px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    
+    .settings-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .setting-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    button {
+      padding: 10px 15px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    
+    button:hover {
+      background-color: #3367d6;
+    }
+    
+    #toggleTranslation {
+      background-color: #f44336;
+    }
+    
+    #toggleTranslation:hover {
+      background-color: #d32f2f;
+    }
+    
+    #toggleTranslation.active {
+      background-color: #4caf50;
+    }
+    
+    #toggleTranslation.active:hover {
+      background-color: #388e3c;
+    }
+    
+    #status {
+      margin-top: 10px;
+      color: #4caf50;
+      min-height: 1.5em;
+    }
+    
+    .word-list {
+      margin-top: 20px;
+    }
+    
+    .word-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .word-list li {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .word-list button {
+      background-color: #ff5252;
+      padding: 5px 10px;
+      margin: 0;
+    }
+    
+    .word-list button:hover {
+      background-color: #d50000;
+    }
+    
+    .password-field {
+      -webkit-text-security: disc;
+      font-family: text-security-disc;
+      -moz-text-security: disc;
+      text-security: disc;
+    }
+  </style>
+</head>
+<body>
+  <h1>OKBot 设置</h1>
+  
+  <div class="settings-container">
+    <h2>API 配置</h2>
+    <div class="setting-group">
+      <label for="aiProvider">AI 选择：</label>
+      <select id="aiProvider">
+        <option value="deepseek">DeepSeek</option>
+        <option value="kimi">Kimi</option>
+        <option value="openai">OpenAI</option>
+      </select>
+      
+      <label for="apiKey">API 密钥：</label>
+      <input type="text" id="apiKey" placeholder="输入API密钥" autocomplete="new-password" class="password-field">
+      
+      <button id="save">保存</button>
+      <button id="toggleTranslation">暂停翻译</button>
+      
+      <div id="status"></div>
+    </div>
+  </div>
+  
+  <div class="settings-container">
+    <h2>单词表</h2>
+    <div class="word-list">
+      <p>这里显示您已添加到高亮列表的单词或短语:</p>
+      <ul id="wordList">
+        <!-- 高亮单词列表将在这里动态生成 -->
+        <li>加载中...</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

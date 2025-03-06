@@ -1,0 +1,252 @@
+/* ========== 通用样式 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ========== 翻译按钮样式 ========== */
+  .gt-translate-button {
+    position: absolute;
+    background: #1C2526;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 2147483647;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.2s;
+  }
+  
+  .gt-translate-button:hover {
+    background: #33393A;
+  }
+  
+  /* X.com专用翻译按钮 */
+  .translate-button {
+    background: none;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 6px;
+    font-size: 14px;
+    display: inline-block;
+    font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.4;
+  }
+  
+  .translate-button:hover {
+    background-color: rgba(29, 161, 242, 0.1) !important;
+  }
+  
+  .translate-button-loading {
+    cursor: not-allowed;
+    background-color: #f0f0f0;
+  }
+  
+  .translate-button-error {
+    color: #ff0000;
+    border-color: #ff0000;
+  }
+  
+  /* ========== 翻译结果样式 ========== */
+  .gt-translate-result {
+    position: fixed;
+    width: 320px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #1C2526;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    z-index: 2147483647;
+    border-left: 3px solid #1da1f2;
+    padding: 0;
+  }
+  
+  .gt-translate-result .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .gt-translate-result .content {
+    padding: 15px;
+  }
+  
+  .gt-translate-result .section {
+    margin-bottom: 15px;
+  }
+  
+  .gt-translate-result .label {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .gt-translate-result .text {
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  
+  .gt-translate-result .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .gt-translate-result button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background: #1da1f2;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .gt-translate-result button:hover {
+    opacity: 0.9;
+  }
+  
+  .gt-translate-result .close-btn {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* X.com翻译结果容器 */
+  .translated-text {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+    background: #1C2526;
+    color: #E6E6E6;
+    font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    border-left: 2px solid #1da1f2;
+    word-break: break-word;
+    border-radius: 4px;
+  }
+  
+  /* 通用网页翻译结果弹窗 */
+  .translation-result-popup {
+    position: absolute;
+    max-width: 350px;
+    background: #1C2526;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 10000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    border-left: 2px solid #1da1f2;
+    line-height: 1.4;
+  }
+  
+  /* ========== 按钮样式 ========== */
+  .translation-action-button, .save-to-flomo-button {
+    background: none;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+  }
+  
+  .translation-action-button:hover, .save-to-flomo-button:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+  }
+  
+  /* ========== 浮动翻译按钮 ========== */
+  .floating-translate-button {
+    background: #1C2526;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+    position: absolute;
+    z-index: 10000;
+  }
+  
+  .floating-translate-button:hover {
+    background: #333333;
+  }
+  
+  /* ========== Toast提示样式 ========== */
+  .gt-toast, .tweet-translator-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 2147483647;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-width: 80%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .gt-toast.show {
+    opacity: 1;
+  }
+  
+  /* ========== 高亮单词样式 ========== */
+  .highlighted-word {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 0 2px;
+    border-radius: 2px;
+    display: inline;
+  }
+  
+  /* 单词提示 */
+  .word-tooltip {
+    position: absolute;
+    background: #1C2526;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 10001;
+    max-width: 300px;
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* 密码字段显示为圆点 */
+.password-field {
+  -webkit-text-security: disc;
+  font-family: text-security-disc;
+  -moz-text-security: disc;
+  text-security: disc;
+}
