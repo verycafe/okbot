@@ -33,7 +33,9 @@ OKBot 是一款基于 Chrome 浏览器的 AI 助手扩展，它能无缝融入�
 
 🚀 安装指南
 
-方法一：下载项目ZIP，解压后将其添加为CHROME的插件。
+方法一：
+1. [下载ZIP文件](https://github.com/verycafe/okbot/archive/refs/heads/main.zip)，
+2. 解压后将其添加为CHROME的插件。
 
 方法二：Chrome 应用商店安装 (即将推出)
 ![CleanShot 2025-03-07 at 00 37 31](https://github.com/user-attachments/assets/d94cbc6f-7b1e-4d2c-b60e-fba75e17d849)
